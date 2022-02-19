@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    background-color: #78d7ee ;
+ 
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 15px;
+    padding: 12px;
+   justify-content: space-between;
+    
+
+}
+.btn_items{
+    display: flex;
+    background-color: #9bdd40;
+    justify-content: flex-end;
+  
+}
+
+
+#add{
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+textarea{
+    resize: none;
+}
