@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="copy" class="item">
+            <textarea name="" id="resultat" cols="30" rows="10"></textarea>
+            <small>copy</small>
+        </div>
+        <div class="items">
+            <div id="pwd" class="item">
+                <label for="lpwd">Longueur du Password</label>
+                <input type="number" id="lpwd">
+            </div>
+            <!-- <div class="majus" class="item">
+                <label for="maj">Contient des lettres Majuscules</label>
+                <input type="checkbox" id="maj" checked>
+            </div> -->
+            <div class="item">
+                <label for="maj">Contient des lettres Majuscules</label>
+                <input type="checkbox" id="maj" checked>
+            </div>
+            <div class="item">
+                <label for="min">Contient des lettres Minuscules</label>
+                <input type="checkbox" id="min" checked>
+            </div>
+            <div class="item">
+                <label for="num"> Contient des Nombres</label>
+                <input type="checkbox" id="num" checked>
+            </div>
+            <div class="item">
+                <label for="carSp">Contient des caracteres SPeciaux</label>
+                <input type="checkbox" id="carSp" checked>
+            </div>
+
+            <button type="submit" class="btn" id="btn">Generer le mot de passe</button>
+
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
