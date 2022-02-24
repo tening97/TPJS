@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(pink, 50%, blue);;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    min-height: 50vh;
+    background-color:white;
+    border-radius: 1rem;
+    
+}
+.items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+.item{
+    display: flex;
+    margin: 2rem;
+    font-size: 2rem;
+}
+input{
+    height: 2rem;
+    width: 5%;
+}
+#btn{
+    width: 100%;
+    height: 2vh;
+    padding: 2rem;
+    color: white;
+    background-color:  #3427f4;
+    font-size: 1.5rem;
+}
+label{
+    font-size: 2rem;
+}
+
+.titreQ{
+    display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
