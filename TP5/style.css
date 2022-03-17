@@ -1,0 +1,58 @@
+body{
+    background-color: #e7e4e4;
+    height: 80vh;
+}
+*{
+    box-sizing: border-box;
+}
+.typeNotification{
+    
+    margin-top: 100px;
+    padding: 10px 10px;
+    background-color: white;
+    width:  auto;
+
+    margin-left: 2px;
+}
+button{
+   padding: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+    margin: 10px 10px 10px 10px;
+    color: white;
+    font-size: 1.5em;
+    border: rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.7);
+
+    outline: none;
+   font-weight: 600;
+   text-align: center;
+}
+.success{
+    background-color: #28a745;
+
+}
+.danger{
+    background-color: #bd2130;
+}
+.warning{
+    background-color: #ffc107;
+
+}
+.info{
+    background-color: #17a2b8;
+
+}
+
+.generate{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+}
+
+
+
