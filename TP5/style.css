@@ -51,8 +51,21 @@ button{
     position: absolute;
     bottom: 0;
     right: 0;
+   
 
 }
+/* .gen{
+    animation-name: animeBtn;
+    animation-duration: 3s;
+}
+@keyframes animeBtn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
 
-
+ */
 

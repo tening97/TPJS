@@ -1,0 +1,233 @@
+/* *{
+    box-sizing: border-box;
+  
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+nav{
+    
+    background-color: #353a3f;
+    color: #aaafb6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+   /*  transform: translate(-100%); 
+    
+}
+
+img{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin-right: 15px;
+   
+}
+.adminTel{
+    display: flex;
+    border-bottom: 2px solid rgb(231, 224, 224);
+    margin-left: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+}
+.logo{
+    display: flex;
+    margin-left: 8px;
+    padding: 10Px;
+}
+ul i{
+    cursor: pointer;
+    color: white;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+}
+#togle{
+    position: absolute;
+    left:16.5%;
+    top: 0px;
+    padding: 10px;
+   background-color: white;
+    border: none;
+  
+}
+button{
+    outline: none;
+}
+input{
+
+    background-color:#353a3f ;
+    padding: 10px;
+    font-size: 1em;
+}
+.search{
+    margin-top: 8px;
+    border: 2px solid rgb(228, 219, 219);
+
+
+}
+
+
+.menu{
+
+
+   
+    width: 300px;
+    font-size: 25px;
+
+}
+li{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    
+
+   
+
+
+}
+p{
+    margin-left: 12px;
+    margin-right: 12px;
+}
+ul i{
+    margin-right: 12px;
+    margin-left: 12px;
+    text-align: center;
+
+}
+.fa-solid .fa-square-6{
+   background-color: aqua;
+}
+.pclass{
+    background-color: #49a0b5;
+    font-weight: 900;
+    color: white;
+    width: auto;
+    text-align: center;
+    border-radius: 19%;
+}
+.pclasse{
+    background-color: red;
+    font-weight: 900;
+    color: white;
+    width: auto;
+    text-align: center;
+    border-radius: 19%;
+
+} */
+/* google font  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background:#353a3f ;
+    height: 100%;
+    width: 300px;
+
+ 
+ 
+}
+.sidebar .logo-details{
+   height: 60px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+ 
+}
+.sidebar .logo-details img{
+    font-size: 30px;
+    color: #fff;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  /*   min-width: 78px;
+    text-align: center;
+   */
+    margin-right:10% ;
+    
+  
+}
+.sidebar .logo-details .logo-name{
+    font-size: 22px;
+    color: #fff;
+
+
+
+}
+.sidebar .nav-links{
+   
+    height: 100%;
+    padding-top:30px ;
+
+
+}
+.sidebar .nav-links li{
+    position: relative;
+    list-style: none;
+    transition: all 0.4s ease;
+}
+.sidebar .nav-links li:hover{
+    background: blue;
+}
+.sidebar .nav-links li i{
+    height: 50px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+
+}
+.sidebar .nav-links li a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.sidebar .nav-links li a .link-name{
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+
+}
+.sidebar .nav-links li .icons-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.sidebar .nav-links li .sous-menu{
+    padding: 6px 6Px 14px 80px;
+    margin-top: -10px;
+    background: blue;
+   /*  display: none; */
+  
+
+}
+.sidebar .nav-links li .sous-menu a{
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 0;
+ 
+}
+
+.sidebar.open .nav-links li .sous-menu{
+    position: absolute;
+    
+  
+
+}
