@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #22254a;
+    height: 100vh auto ;
+   font-family: 'Poppins','sans-serif';
+}
+:root{
+    --primary-color:#373b69;
+    --secondary-color:#22254a;
+    --white-color:white;
+
+}
+header{
+    display: flex;
+    justify-content: flex-end;
+    height: 20%;
+    padding: 3%;
+    background-color: var(--primary-color)
+   
+}
+header input{
+    background-color:transparent;
+    border-color: black;
+    border-radius: 20px;
+    text-align: center;
+    padding: 0.4% 0.4% 0.4% 0.4%  ;
+    font-size: 1.5em;
+    color: var(--white-color);
+
+}
+header input:focus{
+    outline: 0;
+    background-color: var(--primary-color);
+
+}
+header input::placeholder{
+    color: var(--white-color);
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    height: 70%;
+    background-color: var(--secondary-color);
+}
+.info{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.6);
+    background-color: var(--primary-color);
+    position: relative;
+    overflow: hidden;
+
+    
+  
+    margin: 2% 1% 1% 2%;
+    height: 25%;
+}
+img{
+    width: 100%;
+   
+
+}
+.title{
+    display: flex;
+    background-color: var(--primary-color);
+    align-items: center;
+    justify-content: space-between;
+    color: var(--white-color);
+    
+}
+ .overview{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--white-color);
+    padding: 2rem;
+    transform: translateY(100%);
+    height: 50%;
+    overflow: auto;
+    transition: all 0.4s ease;
+} 
+.info:hover .overview{
+    transform: translate(0);
+}
+.title button{
+    margin-right: 2%;
+    background-color: var(--secondary-color);
+    border: none;
+    padding: 2%;
+    font-size: 1em;
+
+}
+.green{
+    color: lightgreen;
+}
+.orange{
+    color: orange;
+}
+
+.info:hover.overview{
+transform: translateY(0);
+}
+.title h3{
+    margin-left: 2%;
+}

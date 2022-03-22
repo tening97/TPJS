@@ -1,70 +1,60 @@
 const btn_g = document.getElementById('gauche');
 const btn_d = document.getElementById('droite');
 const image_defile = document.getElementById('imagedefile');
+const images = ["images/img1.jpg", "images/img2.jpg", "iimages/img3.jpg", "images/img4.jpg", "images/img5.jpg"];
 
 creerImage();
 afficherMasquer();
-
-
+let p = 0;
 
 function creerImage() {
-    nbim = 5;
-    p = 0;
 
-    image_defile.style.width = (900 * nbim) + "px";
-    for (let i = 1; i <= nbim; i++) {
+
+
+    image_defile.style.width = (900 * images.length) + "px";
+    for (let i = 0; i < images.length; i++) {
         const div = document.createElement('div');
         div.className = "photo";
-        div.style.backgroundImage = "url('./images/img" + i + ".jpg')";
-        image_defile.appendChild(div);
-       
+        const image = document.createElement('img');
+        image.setAttribute('src', `${images[i + 1]}`);
+        div.appendChild(image);
+        div.style.backgroundImage =
+            image_defile.appendChild(div);
+
 
     }
 
-   /*  div1 = document.getElementsByClassName('photo');
 
-    p = p + 1;
+    btn_d.onclick = function () {
+        if (p < 0)
+            p++;
+        image_defile.style.transform = "translate(" + p * 900 + "px)";
 
-    if (p > div1.length) {
-        p = 1;
+        afficherMasquer();
+
+
     }
-    for (i = 1; i <= div1.length; i++) {
-        div1[p - i].style.display = "block";
-        setTimeout(creerImage, 1000)
-        p++;
-    } */
-        /*   ; */
-     btn_g.onclick = function () {
- 
-         if (p > -nbim + 1)
-             p--;
-         image_defile.style.transform = "translate(" + p * 900 + "px)";
-         /*  image_defile.style.transition = "all 0.5s ease"; */
-    afficherMasquer();
-
-    /* setTimeout(creerImage, 1000) */
-
-}
- btn_d.onclick = function () {
-     if (p < 0)
-
-
-         p++;
-     image_defile.style.transform = "translate(" + p * 900 + "px)";
-     afficherMasquer();
-
-
- } 
-
+    setInterval(function () {
+        if (p > -nbim + 1)
+            p--;
+        image_defile.style.transform = "translate(" + p * 900 + "px)";
+        image_defile.style.transition = "all 0.5s ease";
+    }, 5000)
 
 
 
 }
+btn_g.onclick = function () {
+    for (let i = 0; i < images.length; i++) {
+        if (p > images.length)
+            p--;
+        creerImage()
+
+    }
 
 
-
-
-
+}
+/* 
 function afficherMasquer() {
 
     if (p == -nbim + 1) {
@@ -79,10 +69,6 @@ function afficherMasquer() {
     else {
         btn_d.style.visibility = "visible";
     }
-}
+} */
 
-function zoom() {
 
-    div.style.width = (960) + "px";
-
-}

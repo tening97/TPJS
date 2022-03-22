@@ -16,7 +16,7 @@ body{
     color: white;
     height: 100vh;
    
-    overflow: hidden;
+
 }
 /* Ombre de superposition */
 body::before{

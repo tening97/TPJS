@@ -1,4 +1,4 @@
-/* *{
+/*  *{
     box-sizing: border-box;
   
 }
@@ -16,7 +16,7 @@ nav{
     top: 0;
     left: 0;
     height: 100vh;
-   /*  transform: translate(-100%); 
+
     
 }
 
@@ -123,8 +123,8 @@ ul i{
     text-align: center;
     border-radius: 19%;
 
-} */
-/* google font  */
+}
+ */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 *{
     font-family: 'Poppins',sans-serif;
@@ -138,8 +138,7 @@ ul i{
     left: 0;
     background:#353a3f ;
     height: 100%;
-    width: 300px;
-
+    width: 302px;
  
  
 }
@@ -148,6 +147,8 @@ ul i{
    width: 100%;
    display: flex;
    align-items: center;
+  
+
  
 }
 .sidebar .logo-details img{
@@ -158,8 +159,9 @@ ul i{
     border-radius: 50%;
   /*   min-width: 78px;
     text-align: center;
-   */
+
     margin-right:10% ;
+    */
     
   
 }
@@ -171,11 +173,8 @@ ul i{
 
 }
 .sidebar .nav-links{
-   
     height: 100%;
     padding-top:30px ;
-
-
 }
 .sidebar .nav-links li{
     position: relative;
@@ -227,7 +226,38 @@ ul i{
 
 .sidebar.open .nav-links li .sous-menu{
     position: absolute;
-    
   
+} 
+#toggle{
+    position: absolute;
+    left:300px;
+    top: 0px;
+    padding: 10px;
+   background-color: white;
+    border: none;
+  
+}
+li{
+    display: flex;
+    
 
+}
+.firstD{
+    flex: 1;
+}
+.secondD{
+    display: flex;
+    flex: 8;
+ align-items: center;
+border: solid 2px red;
+
+}
+.text{
+    flex: 1;
+    font-weight: 400;
+    color: #fff;
+    display: inline-block;
+   
+   
+   
 }
