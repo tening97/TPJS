@@ -12,6 +12,11 @@ const newYearTime = new Date('January 01 2023 00:00:00');
 const actuelTemp = new Date();
 const diff = newYearTime - actuelTemp;
 // DateDiff = new Date(diff).toDateString()
+
+
+jours.innerHTML = moment(diff, "YYYYMMDD").fromNow();
+
 // setInterval(() => {
+
 jours.innerHTML = diff
 // }, 1000);
