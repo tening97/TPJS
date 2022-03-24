@@ -108,11 +108,12 @@ fetch(APIURL)
         const ule = document.querySelector('ul')
         let li = ''
         for (let i = 1; i <= 20; i++) {
+
             li += '<li>' + data.meals[0][`strIngredient${i}`] + '</li>';
-            if (li === "" || li === null) {
+            if (li === "" || li === null || li === 'null') {
 
                 continue;
-                console.log(li);
+              
             }
             else {
                 ule.innerHTML = li
