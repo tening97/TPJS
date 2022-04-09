@@ -4,19 +4,30 @@ const minute = document.getElementById('minute');
 const seconde = document.getElementById('seconde');
 const decompte = document.getElementById('decompte');
 
-const anneeEnCour = new Date();
-const newYearTime = new Date('January 01 2023 00:00:00');
 
-//Mise a jour du compte à rebours
-
-const actuelTemp = new Date();
-const diff = newYearTime - actuelTemp;
-// DateDiff = new Date(diff).toDateString()
+function rebour() {
+    const anneeEnCour = moment();/* 
+    const anneeSuivant = moment().add(1, 'years').add(1, 'months');
+ */
 
 
-jours.innerHTML = moment(diff, "YYYYMMDD").fromNow();
+    const anneeSuivant = moment('2023', "YYYY");
+    let difference = anneeSuivant - anneeEnCour;
+    console.log(difference)
+    let days = anneeSuivant.diff(anneeEnCour, 'days')
+    let duration = moment.duration(difference, 'milliseconds')
+    let heurs = duration._data.hours
+    let min = duration._data.minutes
+    let sec = duration._data.seconds
 
-// setInterval(() => {
+    jours.innerHTML = days;
+    heure.innerHTML = heurs < 10 ? '0' + heurs : heurs;
+    minute.innerHTML = min;
+    seconde.innerHTML = sec
+}
+setInterval(rebour, 1000)
 
-jours.innerHTML = diff
-// }, 1000);
+
+
+
+

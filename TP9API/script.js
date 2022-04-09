@@ -1,4 +1,4 @@
-const APIURL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1";
+const APIURL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=";
 
 const IMGPATH = "https://image.tmdb.org/t/p/w1280";
 
@@ -9,11 +9,8 @@ const container = document.querySelector('.container')
 const form = document.querySelector('form')
 
 const search = document.querySelector('input')
-
-console.log(search);
-
-
-
+const scrollAnime = document.getElementById('scroll')
+console.log(scrollAnime);
 
 //Functions
 
@@ -55,45 +52,39 @@ function create(img, texth3, textbtn, overview) {
     divFils3.appendChild(h3over)
     divFils3.appendChild(p)
 
-
-
-
-
-
-
-
 }
-fetch(APIURL)
-    .then(res => res.json())
-    .then(data => data.results.forEach(element => {
+let p = 1
+useApi(APIURL + p)
+function useApi(url) {
 
-        let image = IMGPATH + element.poster_path
-        let title = element.title
-        let vote = element.vote_average;
-        let overview = element.overview
-        create(image, title, vote, overview);
+    fetch(url)
+        .then(res => res.json())
+        .then(data => data.results.forEach(element => {
 
+            let image = IMGPATH + element.poster_path
+            let title = element.title
+            let vote = element.vote_average;
+            let overview = element.overview
+            create(image, title, vote, overview);
 
+        }))
+}
 
-    }))
 form.addEventListener('input', (e) => {
     container.innerHTML = 'No results found';
-
     e.preventDefault()
     const rechercher = search.value;
     if (rechercher) {
-        fetch(SEARCHAPI + rechercher)
-            .then(res => res.json())
-            .then(data => data.results.forEach(element => {
-                let image = IMGPATH + element.poster_path
-                let title = element.title
-                let vote = element.vote_average;
-                let overview = element.overview;
-                create(image, title, vote, overview);
-
-            }))
-
+        useApi(SEARCHAPI + rechercher)
     }
+})
+window.addEventListener('scroll', () => {
+    const { scrollHeight, scrollTop, clientHeight } = document.documentElement
+    if (clientHeight + scrollTop > scrollHeight) {
+        p++;
+        useApi(APIURL + p)
 
+
+    };
 
 })
